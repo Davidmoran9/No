@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>¡Feliz inicio de clases!</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .card {
+      background: white;
+      padding: 3rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      text-align: center;
+      max-width: 500px;
+      animation: fadeIn 2s ease-out;
+    }
+
+    h1 {
+      color: #2c3e50;
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #34495e;
+    }
+
+    .emoji {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      animation: float 2.5s infinite ease-in-out;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.8rem 2rem;
+      background-color: #3498db;
+      border: none;
+      color: white;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="emoji">🩺📖💊</div>
+    <h1>¡Feliz inicio de clases!</h1>
+    <p>Suerte, se que vas a poder con todo lo que se te ponga en el camino, animo! Te quiero y aqui estare para ti siempre.</p>
+    <button onclick="mostrarMensaje()">Un mensaje especial</button>
+    <button onclick="descargarImagen()">Descargar sorpresa 🫀</button>
+  </div>
+
+  <script>
+    function mostrarMensaje() {
+      alert("Recuerda: cada día es una nueva oportunidad para crecer y acercarte a tus sueños. ¡Mucho éxito este semestre en medicina!");
+    }
+
+    function descargarImagen() {
+      const link = document.createElement('a');
+      link.href = 'paraTI.jpg'; // Cambia esto por el nombre real de tu imagen
+      link.download = 'paraTI.jpg';
+      link.style.display = 'none';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  </script>
+</body>
+</html>
+
+
